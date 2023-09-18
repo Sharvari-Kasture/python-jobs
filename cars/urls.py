@@ -5,5 +5,6 @@ urlpatterns = [
     # Other app URLs
     path('login/', views.CustomLoginView.as_view(), name='custom_login'),
     path('logout/', views.CustomLogoutView.as_view(), name='custom_logout'),
+    path('my-first-function/', views.my_first_function_view, name='my_first_function'),
 ]
 
