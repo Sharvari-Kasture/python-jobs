@@ -29,9 +29,9 @@ SECRET_KEY = '6(l$w4k4ij%cf(%g*349-0-cld(4&dbctw)037juzd4q2h)jot'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    'pythonjobs.in',
-    'www.pythonjobs.in'
+    #'localhost',
+   # 'pythonjobs.in',
+    #'www.pythonjobs.in'
 ]
 
 
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'xcv_core',
     'xcv_seo',
     'xcv_core.xcv_auth',
+    'cars',
 ]
 
 MIDDLEWARE = [
