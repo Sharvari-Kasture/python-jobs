@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'xcv_core',
     'xcv_seo',
     'xcv_core.xcv_auth',
-    'cars',
+    'cars'
 ]
 
 MIDDLEWARE = [

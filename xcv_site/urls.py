@@ -4,9 +4,19 @@ from django.urls import path, include
 
 from .sitemaps import StaticViewSitemap
 from .views import HomeView, ApplyView
+from django.contrib.auth import views as auth_views
+from django.shortcuts import redirect
+from django.urls import path, include
+from django.contrib.auth.views import LoginView, LogoutView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+
+   # path('login/', lambda request: redirect('/accounts/login/')),  # Redirect /login/ to /accounts/login/
+   # path('logout/', lambda request: redirect('accounts/logout/')), # Redirect /login/ to /accounts/logout/
 ]
 
 # Sitemap
@@ -22,4 +32,5 @@ urlpatterns += [
 urlpatterns += [
     path('', HomeView.as_view(), name='home'),
     path('apply/', ApplyView.as_view(), name='apply'),
+    path('cars/', include('cars.urls')),  # Include 'cars' app URLs
 ]
