@@ -26,3 +26,8 @@ class CustomLogoutView(LogoutView):
 def my_first_function_view(request):
     return HttpResponse("My First Function !@#")
 
+def test_view(request):
+    info = "This is the information returned from the test view."
+    return HttpResponse(info)
+
+
