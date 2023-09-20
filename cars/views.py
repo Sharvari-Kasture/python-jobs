@@ -6,6 +6,7 @@ from cars.models import Car, Maker
 from django.utils import timezone
 from django.http import HttpResponse
 from .forms import MakerForm
+from django.http import HttpResponseRedirect
 
 class CustomLoginView(LoginView):
     template_name = 'cars/login.html'
@@ -53,19 +54,18 @@ def car_list(request, suffix_string):
 
 def maker_list(request):
     makers = Maker.objects.all()
+    
     return render(request, 'cars/maker_list.html', {'makers': makers})
-
-
 
 def create_maker(request):
     if request.method == 'POST':
         form = MakerForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('maker_list')  # Redirect to the list view after creating a Maker
+            return HttpResponseRedirect('https://www.google.com/')  # Redirect to google.com
     else:
         form = MakerForm()
-
+    
     return render(request, 'cars/maker_form.html', {'form': form})
 
 
