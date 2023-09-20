@@ -3,7 +3,8 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 from django.contrib.auth.views import LoginView, LogoutView
 from xcv_seo.mixin import SEOMixin
-
+from django.shortcuts import render
+from cars.models import Car
 from django.http import HttpResponse
 
 class CustomLoginView(LoginView):
@@ -29,5 +30,20 @@ def my_first_function_view(request):
 def test_view(request):
     info = "This is the information returned from the test view."
     return HttpResponse(info)
+
+def car_list(request):
+    # Retrieve a list of all cars
+    cars = Car.objects.all()
+
+    # Pass the list of cars to the template
+    context = {
+        'cars': cars
+    }
+    print(f"Number of Cars: {len(cars)}")
+
+    return render(request, 'cars/car_list.html', context)
+
+
+
 
 

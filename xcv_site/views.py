@@ -1,5 +1,6 @@
 from django.views.generic import TemplateView
 from xcv_seo.mixin import SEOMixin
+from django.contrib.auth.decorators import login_required
 
 
 class HomeView(SEOMixin, TemplateView):
