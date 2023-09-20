@@ -4,11 +4,12 @@ from django.urls import path, include
 
 from .sitemaps import StaticViewSitemap
 from .views import HomeView, ApplyView
-from cars.views import CustomLoginView, CarListView
+from cars.views import CustomLoginView, CarListView, CarDetail
 from django.contrib.auth import views as auth_views
 from django.shortcuts import redirect
 from django.urls import path, include
 from django.contrib.auth.views import LoginView, LogoutView
+
 
 
 urlpatterns = [
@@ -35,6 +36,8 @@ urlpatterns += [
     path('apply/', ApplyView.as_view(), name='apply'),
     path('login/', CustomLoginView.as_view(), name='login'),
     path('clist/', CarListView.as_view(), name='car-list'),
+     path('cars/', CarListView.as_view(), name='car-list'),
+    path('api/cars_Serializer/<int:pk>/', CarDetail.as_view(), name='car-detail'),
     path('cars/', include('cars.urls')),  # Include 'cars' app URLs
     path('maker/', include('cars.urls')), 
 ]

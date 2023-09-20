@@ -55,4 +55,5 @@ urlpatterns += [
     path('clist/', CarListView.as_view(), name='car-list'),
     path('cars/', include('cars.urls')),  # Include 'cars' app URLs
     path('maker/', include('cars.urls')), 
+    
 ]

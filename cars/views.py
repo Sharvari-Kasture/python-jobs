@@ -10,6 +10,9 @@ from django.http import HttpResponse
 from .forms import MakerForm
 from django.http import HttpResponseRedirect
 from django.views.generic import ListView
+from rest_framework import generics
+from .models import Car
+from .serializers import CarSerializer
 from django.shortcuts import render, get_object_or_404
 
 class CustomLoginView(LoginView):
@@ -144,6 +147,14 @@ def car_detail(request, car_name):
         # You can raise Http404 or render a custom 404 template here.
         return render(request, 'cars/car_not_found.html')
 
+#Serializer
+class CarList(generics.ListCreateAPIView):
+    queryset = Car.objects.all()
+    serializer_class = CarSerializer
+
+class CarDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Car.objects.all()
+    serializer_class = CarSerializer
 
 def maker_list(request):
     makers = Maker.objects.all()
