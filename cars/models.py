@@ -1,8 +1,11 @@
 from django.db import models
+from django.utils import timezone
+
 
 class Maker(models.Model):
     name = models.CharField(max_length=255)
     number_of_cars = models.IntegerField(default=0)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name

@@ -51,6 +51,7 @@
             <tr>
                 <th>Maker Name</th>
                 <th>Number of Cars</th>
+                <th>Last Updated</th>
             </tr>
         </thead>
         <tbody>
@@ -58,10 +59,11 @@
                 <tr>
                     <td>{{ maker.name }}</td>
                     <td>{{ maker.number_of_cars }}</td>
+                    <td>{{ maker.updated_at }}</td>
                 </tr>
             {% empty %}
                 <tr>
-                    <td colspan="2">No makers found.</td>
+                    <td colspan="3">No makers found.</td>
                 </tr>
             {% endfor %}
         </tbody>

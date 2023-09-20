@@ -61,7 +61,9 @@ def create_maker(request):
     if request.method == 'POST':
         form = MakerForm(request.POST)
         if form.is_valid():
-            form.save()
+            maker = form.save(commit=False)
+            maker.updated_at = timezone.now()  # Set the updated_at field to the current timestamp
+            maker.save()
             return HttpResponseRedirect('https://www.google.com/')  # Redirect to google.com
     else:
         form = MakerForm()
