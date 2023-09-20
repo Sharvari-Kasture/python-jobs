@@ -1,0 +1,25 @@
+In [1]: from cars.models import Maker
+   ...:
+   ...: # Create a new Maker instance
+   ...: maker = Maker.objects.create(name='Ford', number_of_cars=100)
+   ...:
+   ...: # Save the instance
+   ...: maker.save()
+
+In [2]: # Retrieve all Maker instances
+   ...: makers = Maker.objects.all()
+   ...:
+   ...: # Retrieve a specific Maker by name
+   ...: ford_maker = Maker.objects.get(name='Ford')
+   ...:
+   ...: # Filter Maker instances
+   ...: filtered_makers = Maker.objects.filter(number_of_cars__gt=50)
+   ...:
+
+In [3]: # Retrieve an instance to update (e.g., Ford)
+   ...: ford_maker = Maker.objects.get(name='Ford')
+   ...:
+   ...: # Update the attributes
+   ...: ford_maker.number_of_cars = 120
+   ...: ford_maker.save()
+   ...:
