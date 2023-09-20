@@ -1,10 +1,11 @@
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
-from django.shortcuts import render
-from cars.models import Car
+from django.shortcuts import render, redirect
+from cars.models import Car, Maker
 from django.utils import timezone
 from django.http import HttpResponse
+from .forms import MakerForm
 
 class CustomLoginView(LoginView):
     template_name = 'cars/login.html'
@@ -49,6 +50,22 @@ def car_list(request, suffix_string):
     }
 
     return render(request, 'cars/car_list.html', context)
+
+def maker_list(request):
+    makers = Maker.objects.all()
+    return render(request, 'cars/maker_list.html', {'makers': makers})
+
+
+def create_maker(request):
+    if request.method == 'POST':
+        form = MakerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('maker_list')  # Redirect to the list view after creating a Maker
+    else:
+        form = MakerForm()
+
+    return render(request, 'cars/maker_form.html', {'form': form})
 
 
 

@@ -33,4 +33,5 @@ urlpatterns += [
     path('', HomeView.as_view(), name='home'),
     path('apply/', ApplyView.as_view(), name='apply'),
     path('cars/', include('cars.urls')),  # Include 'cars' app URLs
+    path('maker/', include('cars.urls')), 
 ]
