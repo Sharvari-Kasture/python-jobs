@@ -10,6 +10,7 @@ from django.http import HttpResponse
 from .forms import MakerForm
 from django.http import HttpResponseRedirect
 from django.views.generic import ListView
+from django.shortcuts import render, get_object_or_404
 
 class CustomLoginView(LoginView):
     template_name = 'cars/login.html'
@@ -105,7 +106,7 @@ class CarListView(ListView):
     template_name = 'cars/car_list.html'
     context_object_name = 'cars'
     paginate_by = 25  # Set the number of cars to display per page
-    
+
 def my_first_function_view(request):
     return HttpResponse("My First Function !@#")
 
@@ -132,6 +133,16 @@ def car_list(request, suffix_string):
     }
 
     return render(request, 'cars/car_list.html', context)
+
+
+def car_detail(request, car_name):
+    try:
+        car = Car.objects.get(car_name=car_name)
+        return render(request, 'cars/car_detail.html', {'car': car})
+    except Car.DoesNotExist:
+        # Handle the case where the car is not found (e.g., show a 404 page)
+        # You can raise Http404 or render a custom 404 template here.
+        return render(request, 'cars/car_not_found.html')
 
 
 def maker_list(request):

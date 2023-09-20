@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Detail</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Details</h1>
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td><strong>Name:</strong></td>
+            <td>{{ car.car_name }}</td>
+        </tr>
+        <tr>
+            <td><strong>Maker:</strong></td>
+            <td>{{ car.maker.name }}</td>
+        </tr>
+        <tr>
+            <td><strong>HP:</strong></td>
+            <td>{{ car.hpp }}</td>
+        </tr>
+        <tr>
+            <td><strong>Launch Date:</strong></td>
+            <td>{{ car.launch_date }}</td>
+        </tr>
+        
+    </table>
+</body>
+</html>
