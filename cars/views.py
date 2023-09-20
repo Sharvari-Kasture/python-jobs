@@ -31,11 +31,15 @@ def test_view(request):
     return HttpResponse(info)
 
 
-def car_list(request):
+def car_list(request, suffix_string):
     # Retrieve a list of cars with names starting with 'F'
     cars = Car.objects.filter(car_name__startswith='F')
 
-    # Pass the list of cars to the template
+    # Append the suffix_string to car names
+    for car in cars:
+        car.car_name += suffix_string
+
+    # Pass the list of modified cars to the template
     context = {
         'cars': cars
     }
