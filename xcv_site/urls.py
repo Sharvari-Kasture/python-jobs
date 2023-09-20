@@ -4,6 +4,7 @@ from django.urls import path, include
 
 from .sitemaps import StaticViewSitemap
 from .views import HomeView, ApplyView
+from cars.views import CustomLoginView, CarListView
 from django.contrib.auth import views as auth_views
 from django.shortcuts import redirect
 from django.urls import path, include
@@ -32,6 +33,8 @@ urlpatterns += [
 urlpatterns += [
     path('', HomeView.as_view(), name='home'),
     path('apply/', ApplyView.as_view(), name='apply'),
+    path('login/', CustomLoginView.as_view(), name='login'),
+    path('clist/', CarListView.as_view(), name='car-list'),
     path('cars/', include('cars.urls')),  # Include 'cars' app URLs
     path('maker/', include('cars.urls')), 
 ]

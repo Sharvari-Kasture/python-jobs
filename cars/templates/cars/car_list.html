@@ -11,9 +11,19 @@
         }
 
         /* Style every alternate line with a blue background */
+        ul.car-list {
+            list-style-type: none; /* Remove bullets from list items */
+            padding: 0; /* Remove default padding */
+        }
+
         ul.car-list li:nth-child(even) {
             background-color: blue;
             color: white; /* White text on blue background for better readability */
+            padding: 5px; /* Add some spacing to improve appearance */
+        }
+
+        ul.car-list li:nth-child(odd) {
+            padding: 5px; /* Add padding to odd lines to maintain consistency */
         }
     </style>
 </head>

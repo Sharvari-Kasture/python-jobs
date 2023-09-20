@@ -9,6 +9,7 @@ from django.utils import timezone
 from django.http import HttpResponse
 from .forms import MakerForm
 from django.http import HttpResponseRedirect
+from django.views.generic import ListView
 
 class CustomLoginView(LoginView):
     template_name = 'cars/login.html'
@@ -99,6 +100,12 @@ class HomeView(SEOMixin, TemplateView):
 class ApplyView(SEOMixin, TemplateView):
     template_name = 'apply.html'
 
+class CarListView(ListView):
+    model = Car
+    template_name = 'cars/car_list.html'
+    context_object_name = 'cars'
+    paginate_by = 25  # Set the number of cars to display per page
+    
 def my_first_function_view(request):
     return HttpResponse("My First Function !@#")
 
@@ -125,6 +132,7 @@ def car_list(request, suffix_string):
     }
 
     return render(request, 'cars/car_list.html', context)
+
 
 def maker_list(request):
     makers = Maker.objects.all()
