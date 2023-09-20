@@ -1,18 +1,30 @@
-<!-- cars/templates/cars/car_list.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>List of Cars Starting with 'F'</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car List</title>
+    <style>
+        /* Center the heading */
+        h1 {
+            text-align: center;
+        }
+
+        /* Style every alternate line with a blue background */
+        ul.car-list li:nth-child(even) {
+            background-color: blue;
+            color: white; /* White text on blue background for better readability */
+        }
+    </style>
 </head>
 <body>
-    <h1>List of Cars Starting with 'F'</h1>
-    <ul>
+    <h1>Car List</h1>
+    <ul class="car-list">
         {% for car in cars %}
-            <li>{{ car.car_name }} (Maker: {{ car.maker.name }}, HPP: {{ car.hpp }}, Launch Date: {{ car.launch_date }})</li>
+            <li>{{ car.car_name }} (Launch Date: {{ car.launch_date }})</li>
         {% empty %}
-            <li>There are No cars available Starting with 'F'</li>
+            <li>No future cars starting with 'F' found.</li>
+            <li>Data not present.</li>
         {% endfor %}
     </ul>
 </body>

@@ -30,22 +30,26 @@ def test_view(request):
     info = "This is the information returned from the test view."
     return HttpResponse(info)
 
-
 def car_list(request, suffix_string):
-    # Retrieve a list of cars with names starting with 'F'
-    cars = Car.objects.filter(car_name__startswith='F')
+    # Retrieve a list of all cars
+    cars = Car.objects.all()
+    current_date = timezone.now()
+    cars = Car.objects.filter(launch_date__gt=current_date)
+
+    # Filter cars with names starting with 'F'
+    cars_with_f = [car for car in cars if car.car_name.startswith('F')]
 
     # Append the suffix_string to car names
-    for car in cars:
+    for car in cars_with_f:
         car.car_name += suffix_string
 
     # Pass the list of modified cars to the template
     context = {
-        'cars': cars
+        'cars': cars_with_f
     }
-    print(f"Number of Cars: {len(cars)}")
 
     return render(request, 'cars/car_list.html', context)
+
 
 
 
