@@ -28,7 +28,7 @@ SECRET_KEY = '6(l$w4k4ij%cf(%g*349-0-cld(4&dbctw)037juzd4q2h)jot'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
+ALLOWED_HOSTS = [ '*'
     #'localhost',
    # 'pythonjobs.in',
     #'www.pythonjobs.in'
