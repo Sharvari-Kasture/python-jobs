@@ -1,0 +1,215 @@
+<!-- cars/templates/cars/car_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Cars</title>
+</head>
+<body>
+    <h1>List of Cars</h1>
+    <ul>
+        
+            <li>Angela (Maker: Gill-Harvey, HPP: 439, Launch Date: July 13, 2009)</li>
+        
+            <li>Mary (Maker: Hopkins-Mathis, HPP: 470, Launch Date: Feb. 27, 2014)</li>
+        
+            <li>Allison (Maker: Campbell, Miles and Mullen, HPP: 323, Launch Date: Nov. 27, 2012)</li>
+        
+            <li>Charles (Maker: Johnston PLC, HPP: 235, Launch Date: Dec. 8, 2008)</li>
+        
+            <li>Michael (Maker: Dougherty-Pratt, HPP: 102, Launch Date: March 25, 2015)</li>
+        
+            <li>Maria (Maker: Lucero-Davis, HPP: 260, Launch Date: June 8, 2020)</li>
+        
+            <li>Krystal (Maker: Holland Ltd, HPP: 307, Launch Date: Oct. 30, 1994)</li>
+        
+            <li>Cynthia (Maker: Lucero-Davis, HPP: 400, Launch Date: Oct. 16, 2007)</li>
+        
+            <li>Ian (Maker: Rivera, Morgan and Jones, HPP: 374, Launch Date: Nov. 15, 2002)</li>
+        
+            <li>Margaret (Maker: Johnston PLC, HPP: 134, Launch Date: June 28, 2001)</li>
+        
+            <li>Ashley (Maker: Dougherty-Pratt, HPP: 388, Launch Date: Sept. 3, 2021)</li>
+        
+            <li>Jessica (Maker: Johnston PLC, HPP: 493, Launch Date: Aug. 29, 1999)</li>
+        
+            <li>Madison (Maker: Lucero-Davis, HPP: 161, Launch Date: April 1, 2016)</li>
+        
+            <li>Terry (Maker: Hopkins-Mathis, HPP: 391, Launch Date: Jan. 17, 2008)</li>
+        
+            <li>James (Maker: Dougherty-Pratt, HPP: 289, Launch Date: Aug. 17, 2017)</li>
+        
+            <li>Scott (Maker: Dougherty-Pratt, HPP: 238, Launch Date: April 8, 2016)</li>
+        
+            <li>Tiffany (Maker: Dougherty-Pratt, HPP: 478, Launch Date: Aug. 29, 2015)</li>
+        
+            <li>Lisa (Maker: Lucero-Davis, HPP: 411, Launch Date: May 28, 1998)</li>
+        
+            <li>Samuel (Maker: Hopkins-Mathis, HPP: 181, Launch Date: Aug. 21, 2002)</li>
+        
+            <li>Timothy (Maker: Dougherty-Pratt, HPP: 263, Launch Date: July 30, 1997)</li>
+        
+            <li>Aaron (Maker: Dougherty-Pratt, HPP: 160, Launch Date: March 22, 2016)</li>
+        
+            <li>Patricia (Maker: Dougherty-Pratt, HPP: 328, Launch Date: Jan. 14, 1997)</li>
+        
+            <li>Paula (Maker: Dougherty-Pratt, HPP: 248, Launch Date: Dec. 26, 2015)</li>
+        
+            <li>Sherri (Maker: Lucero-Davis, HPP: 102, Launch Date: Feb. 24, 2017)</li>
+        
+            <li>Laura (Maker: Johnston PLC, HPP: 268, Launch Date: Jan. 31, 2001)</li>
+        
+            <li>Karen (Maker: Dougherty-Pratt, HPP: 271, Launch Date: June 15, 2004)</li>
+        
+            <li>David (Maker: Guzman, Neal and Robinson, HPP: 327, Launch Date: May 31, 1996)</li>
+        
+            <li>Kenneth (Maker: Dougherty-Pratt, HPP: 226, Launch Date: Dec. 1, 2021)</li>
+        
+            <li>Joshua (Maker: Brock Group, HPP: 265, Launch Date: Oct. 16, 2013)</li>
+        
+            <li>Andrew (Maker: Campbell, Miles and Mullen, HPP: 259, Launch Date: Feb. 8, 2010)</li>
+        
+            <li>Holly (Maker: Holland Ltd, HPP: 410, Launch Date: Oct. 1, 2021)</li>
+        
+            <li>Cheryl (Maker: Lucero-Davis, HPP: 161, Launch Date: Feb. 1, 2015)</li>
+        
+            <li>Christopher (Maker: Hopkins-Mathis, HPP: 294, Launch Date: Oct. 16, 2019)</li>
+        
+            <li>Troy (Maker: Holland Ltd, HPP: 110, Launch Date: Feb. 12, 2014)</li>
+        
+            <li>Jacob (Maker: Lucero-Davis, HPP: 358, Launch Date: Dec. 25, 2012)</li>
+        
+            <li>Renee (Maker: Lucero-Davis, HPP: 192, Launch Date: Oct. 25, 2004)</li>
+        
+            <li>Todd (Maker: Lucero-Davis, HPP: 275, Launch Date: Dec. 20, 2019)</li>
+        
+            <li>Kevin (Maker: Lucero-Davis, HPP: 130, Launch Date: Sept. 30, 1997)</li>
+        
+            <li>Valerie (Maker: Rivera, Morgan and Jones, HPP: 283, Launch Date: Oct. 27, 2004)</li>
+        
+            <li>Jonathan (Maker: Guzman, Neal and Robinson, HPP: 482, Launch Date: Sept. 29, 2001)</li>
+        
+            <li>Gwendolyn (Maker: Johnston PLC, HPP: 122, Launch Date: March 7, 2017)</li>
+        
+            <li>Edward (Maker: Brock Group, HPP: 429, Launch Date: July 23, 1994)</li>
+        
+            <li>Jennifer (Maker: Campbell, Miles and Mullen, HPP: 423, Launch Date: Aug. 21, 1996)</li>
+        
+            <li>Carlos (Maker: Gill-Harvey, HPP: 454, Launch Date: April 13, 1995)</li>
+        
+            <li>Kristen (Maker: Hopkins-Mathis, HPP: 160, Launch Date: Jan. 23, 2013)</li>
+        
+            <li>Morgan (Maker: Campbell, Miles and Mullen, HPP: 117, Launch Date: June 28, 2002)</li>
+        
+            <li>William (Maker: Lucero-Davis, HPP: 474, Launch Date: Nov. 24, 2022)</li>
+        
+            <li>Courtney (Maker: Campbell, Miles and Mullen, HPP: 102, Launch Date: April 13, 2006)</li>
+        
+            <li>Emily (Maker: Lucero-Davis, HPP: 201, Launch Date: Sept. 22, 1999)</li>
+        
+            <li>Melanie (Maker: Johnston PLC, HPP: 412, Launch Date: Oct. 19, 1997)</li>
+        
+            <li>Gregory (Maker: Lucero-Davis, HPP: 154, Launch Date: Nov. 16, 2003)</li>
+        
+            <li>Shawn (Maker: Campbell, Miles and Mullen, HPP: 409, Launch Date: Oct. 11, 2018)</li>
+        
+            <li>Yvonne (Maker: Gill-Harvey, HPP: 105, Launch Date: July 13, 2022)</li>
+        
+            <li>John (Maker: Rivera, Morgan and Jones, HPP: 210, Launch Date: Sept. 10, 2004)</li>
+        
+            <li>Lance (Maker: Dougherty-Pratt, HPP: 292, Launch Date: Oct. 27, 2021)</li>
+        
+            <li>Rachel (Maker: Campbell, Miles and Mullen, HPP: 105, Launch Date: Feb. 13, 2018)</li>
+        
+            <li>Nancy (Maker: Dougherty-Pratt, HPP: 261, Launch Date: April 2, 2005)</li>
+        
+            <li>Darrell (Maker: Johnston PLC, HPP: 440, Launch Date: May 6, 2005)</li>
+        
+            <li>Justin (Maker: Brock Group, HPP: 107, Launch Date: Nov. 6, 2020)</li>
+        
+            <li>Hunter (Maker: Hopkins-Mathis, HPP: 261, Launch Date: Jan. 5, 2002)</li>
+        
+            <li>Pamela (Maker: Hopkins-Mathis, HPP: 396, Launch Date: May 31, 2001)</li>
+        
+            <li>Amanda (Maker: Hopkins-Mathis, HPP: 298, Launch Date: May 19, 2021)</li>
+        
+            <li>Nicholas (Maker: Guzman, Neal and Robinson, HPP: 259, Launch Date: Feb. 15, 2020)</li>
+        
+            <li>Benjamin (Maker: Rivera, Morgan and Jones, HPP: 337, Launch Date: July 20, 2011)</li>
+        
+            <li>Misty (Maker: Guzman, Neal and Robinson, HPP: 459, Launch Date: May 8, 2008)</li>
+        
+            <li>Kathy (Maker: Holland Ltd, HPP: 459, Launch Date: Oct. 8, 1994)</li>
+        
+            <li>Krista (Maker: Johnston PLC, HPP: 427, Launch Date: Oct. 9, 2001)</li>
+        
+            <li>Robin (Maker: Dougherty-Pratt, HPP: 313, Launch Date: Nov. 28, 2016)</li>
+        
+            <li>Theodore (Maker: Johnston PLC, HPP: 499, Launch Date: March 8, 2002)</li>
+        
+            <li>Jeffrey (Maker: Gill-Harvey, HPP: 392, Launch Date: July 30, 1999)</li>
+        
+            <li>Patrick (Maker: Dougherty-Pratt, HPP: 320, Launch Date: March 26, 2009)</li>
+        
+            <li>Chad (Maker: Campbell, Miles and Mullen, HPP: 382, Launch Date: May 19, 2001)</li>
+        
+            <li>Vanessa (Maker: Holland Ltd, HPP: 108, Launch Date: June 18, 2019)</li>
+        
+            <li>Bradley (Maker: Campbell, Miles and Mullen, HPP: 417, Launch Date: Jan. 10, 1999)</li>
+        
+            <li>Marcia (Maker: Lucero-Davis, HPP: 457, Launch Date: July 6, 2015)</li>
+        
+            <li>Mark (Maker: Brock Group, HPP: 213, Launch Date: Sept. 14, 2001)</li>
+        
+            <li>Derrick (Maker: Holland Ltd, HPP: 254, Launch Date: Oct. 13, 2018)</li>
+        
+            <li>Alyssa (Maker: Campbell, Miles and Mullen, HPP: 442, Launch Date: July 11, 2023)</li>
+        
+            <li>Jeanne (Maker: Guzman, Neal and Robinson, HPP: 430, Launch Date: Aug. 9, 2002)</li>
+        
+            <li>Denise (Maker: Lucero-Davis, HPP: 352, Launch Date: June 6, 1998)</li>
+        
+            <li>Dawn (Maker: Guzman, Neal and Robinson, HPP: 231, Launch Date: Oct. 18, 2016)</li>
+        
+            <li>Sara (Maker: Campbell, Miles and Mullen, HPP: 422, Launch Date: July 12, 2007)</li>
+        
+            <li>Alexis (Maker: Rivera, Morgan and Jones, HPP: 241, Launch Date: Jan. 31, 1997)</li>
+        
+            <li>Robert (Maker: Johnston PLC, HPP: 444, Launch Date: July 25, 2017)</li>
+        
+            <li>Sherry (Maker: Rivera, Morgan and Jones, HPP: 189, Launch Date: July 19, 2014)</li>
+        
+            <li>Adrian (Maker: Dougherty-Pratt, HPP: 377, Launch Date: Sept. 20, 2010)</li>
+        
+            <li>Steven (Maker: Dougherty-Pratt, HPP: 475, Launch Date: April 9, 2018)</li>
+        
+            <li>Joseph (Maker: Johnston PLC, HPP: 162, Launch Date: Aug. 1, 2020)</li>
+        
+            <li>Gavin (Maker: Hopkins-Mathis, HPP: 333, Launch Date: Oct. 12, 2011)</li>
+        
+            <li>Anthony (Maker: Campbell, Miles and Mullen, HPP: 396, Launch Date: Feb. 7, 2001)</li>
+        
+            <li>Calvin (Maker: Brock Group, HPP: 283, Launch Date: Nov. 26, 2004)</li>
+        
+            <li>Russell (Maker: Johnston PLC, HPP: 360, Launch Date: Oct. 5, 1997)</li>
+        
+            <li>Kelly (Maker: Guzman, Neal and Robinson, HPP: 165, Launch Date: Jan. 8, 2012)</li>
+        
+            <li>Rebecca (Maker: Guzman, Neal and Robinson, HPP: 244, Launch Date: June 3, 2013)</li>
+        
+            <li>Grace (Maker: Campbell, Miles and Mullen, HPP: 484, Launch Date: Jan. 23, 1996)</li>
+        
+            <li>Christine (Maker: Rivera, Morgan and Jones, HPP: 408, Launch Date: June 9, 2007)</li>
+        
+            <li>Donna (Maker: Hopkins-Mathis, HPP: 293, Launch Date: Feb. 12, 2005)</li>
+        
+            <li>Melissa (Maker: Gill-Harvey, HPP: 357, Launch Date: Oct. 14, 2009)</li>
+        
+            <li>Douglas (Maker: Holland Ltd, HPP: 175, Launch Date: Oct. 5, 2019)</li>
+        
+            <li>Kimberly (Maker: Lucero-Davis, HPP: 470, Launch Date: May 19, 2019)</li>
+        
+    </ul>
+</body>
+</html>
