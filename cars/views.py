@@ -56,6 +56,7 @@ def maker_list(request):
     return render(request, 'cars/maker_list.html', {'makers': makers})
 
 
+
 def create_maker(request):
     if request.method == 'POST':
         form = MakerForm(request.POST)
