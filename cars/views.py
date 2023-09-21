@@ -15,6 +15,7 @@ from .models import Car
 from rest_framework.generics import UpdateAPIView
 from .serializers import CarSerializer,MakerSerializer, MakerUpdateSerializer, CarUpdateSerializer
 from django.shortcuts import render, get_object_or_404
+import logging
 
 class CustomLoginView(LoginView):
     template_name = 'cars/login.html'
@@ -110,6 +111,15 @@ class CarListView(ListView):
     template_name = 'cars/car_list.html'
     context_object_name = 'cars'
     paginate_by = 25  # Set the number of cars to display per page
+    def post(self, request, *args, **kwargs):
+        # Get the logger for the app (both cars and makers)
+        logger = logging.getLogger('django')
+        
+        # Log an info message
+        logger.info('This is an info message for the app.')
+        
+        # Continue with your view logic (e.g., handling the POST request)
+        return super().post(request, *args, **kwargs)
 
 def my_first_function_view(request):
     return HttpResponse("My First Function !@#")
@@ -164,8 +174,8 @@ class CarDetail(generics.RetrieveUpdateDestroyAPIView):
 
 def maker_list(request):
     makers = Maker.objects.all()
-    
-    return render(request, 'cars/maker_list.html', {'makers': makers})
+    maker_logger = logging.getLogger('makers')
+
 
 def create_maker(request):
     if request.method == 'POST':
@@ -188,7 +198,7 @@ class MakerListCreateView(generics.ListCreateAPIView):
 class MakerDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Maker.objects.all()
     serializer_class = MakerSerializer
-    
+
 class MakerPatchView(UpdateAPIView):
     queryset = Maker.objects.all()
     serializer_class = MakerUpdateSerializer
