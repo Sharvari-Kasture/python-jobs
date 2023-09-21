@@ -4,7 +4,7 @@ from xcv_seo.mixin import SEOMixin
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
-from cars.models import Car, Maker, car_created
+from cars.models import Car, Maker
 from django.utils import timezone
 from django.http import HttpResponse
 from .forms import MakerForm
