@@ -4,7 +4,7 @@ from xcv_seo.mixin import SEOMixin
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
-from cars.models import Car, Maker
+from cars.models import Car, Maker, car_created
 from django.utils import timezone
 from django.http import HttpResponse
 from .forms import MakerForm
@@ -111,6 +111,8 @@ class CarListView(ListView):
     template_name = 'cars/car_list.html'
     context_object_name = 'cars'
     paginate_by = 25  # Set the number of cars to display per page
+
+
     def post(self, request, *args, **kwargs):
         # Get the logger for the app (both cars and makers)
         logger = logging.getLogger('django')

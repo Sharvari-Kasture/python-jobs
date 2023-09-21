@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils import timezone
+from django.db.models.signals import Signal, post_save
+from django.dispatch import receiver
 
+car_created = Signal(providing_args=["car_instance"])
 
 class Maker(models.Model):
     name = models.CharField(max_length=255)
@@ -20,5 +23,17 @@ class Car(models.Model):
 
     def __str__(self):
         return self.car_name
+    
+car_created = Signal()
+
+# Signal handler function
+@receiver(car_created)
+def update_maker_car_count(sender, car_instance, **kwargs):
+    maker = car_instance.maker
+    maker.number_of_cars += 1
+    maker.save()
+
+# Connect the signal handler to the post_save signal of Car model
+post_save.connect(update_maker_car_count, sender=Car)
 
 
