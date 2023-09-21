@@ -4,7 +4,7 @@ from django.urls import path, include
 
 from .sitemaps import StaticViewSitemap
 from .views import HomeView, ApplyView
-from cars.views import CustomLoginView, CarListView, CarDetail
+from cars.views import CustomLoginView, CarListView, CarDetail, CarPatchView, MakerPatchView
 from django.contrib.auth import views as auth_views
 from django.shortcuts import redirect
 from django.urls import path, include
@@ -38,6 +38,8 @@ urlpatterns += [
     path('clist/', CarListView.as_view(), name='car-list'),
      path('cars/', CarListView.as_view(), name='car-list'),
     path('api/cars_Serializer/<int:pk>/', CarDetail.as_view(), name='car-detail'),
+    path('maker/<int:id>/', MakerPatchView.as_view(), name='maker-patch'),
+    path('cars/<int:id>/', CarPatchView.as_view(), name='car-patch'),
     path('cars/', include('cars.urls')),  # Include 'cars' app URLs
     path('maker/', include('cars.urls')), 
 ]

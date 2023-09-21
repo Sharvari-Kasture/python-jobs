@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.sites',
     'django_extensions',
+    'rest_framework',
     'rangefilter',
     'xcv_core',
     'xcv_seo',

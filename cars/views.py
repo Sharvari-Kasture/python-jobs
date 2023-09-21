@@ -12,7 +12,8 @@ from django.http import HttpResponseRedirect
 from django.views.generic import ListView
 from rest_framework import generics
 from .models import Car
-from .serializers import CarSerializer
+from rest_framework.generics import UpdateAPIView
+from .serializers import CarSerializer, MakerUpdateSerializer, CarUpdateSerializer
 from django.shortcuts import render, get_object_or_404
 
 class CustomLoginView(LoginView):
@@ -152,6 +153,11 @@ class CarList(generics.ListCreateAPIView):
     queryset = Car.objects.all()
     serializer_class = CarSerializer
 
+class CarPatchView(UpdateAPIView):
+    queryset = Car.objects.all()
+    serializer_class = CarUpdateSerializer
+    lookup_field = 'id'
+
 class CarDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Car.objects.all()
     serializer_class = CarSerializer
@@ -173,6 +179,13 @@ def create_maker(request):
         form = MakerForm()
     
     return render(request, 'cars/maker_form.html', {'form': form})
+
+#serializer
+class MakerPatchView(UpdateAPIView):
+    queryset = Maker.objects.all()
+    serializer_class = MakerUpdateSerializer
+    lookup_field = 'id'
+
 
 
 
