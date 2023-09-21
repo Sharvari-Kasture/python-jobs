@@ -8,6 +8,13 @@ class CarSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class MakerSerializer(serializers.ModelSerializer):
+    cars = CarSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Maker
+        fields = '__all__'
+
 class MakerUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Maker

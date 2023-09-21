@@ -13,7 +13,7 @@ from django.views.generic import ListView
 from rest_framework import generics
 from .models import Car
 from rest_framework.generics import UpdateAPIView
-from .serializers import CarSerializer, MakerUpdateSerializer, CarUpdateSerializer
+from .serializers import CarSerializer,MakerSerializer, MakerUpdateSerializer, CarUpdateSerializer
 from django.shortcuts import render, get_object_or_404
 
 class CustomLoginView(LoginView):
@@ -181,6 +181,14 @@ def create_maker(request):
     return render(request, 'cars/maker_form.html', {'form': form})
 
 #serializer
+class MakerListCreateView(generics.ListCreateAPIView):
+    queryset = Maker.objects.all()
+    serializer_class = MakerSerializer
+
+class MakerDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Maker.objects.all()
+    serializer_class = MakerSerializer
+    
 class MakerPatchView(UpdateAPIView):
     queryset = Maker.objects.all()
     serializer_class = MakerUpdateSerializer

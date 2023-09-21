@@ -10,6 +10,8 @@ urlpatterns = [
     path('list/<str:suffix_string>/', views.car_list, name='car_list'),
     path('create/', views.create_maker, name='create_maker'),
     path('mlist/', views.maker_list, name='maker_list'),
+    path('mserializer/', views.MakerListCreateView.as_view(), name='maker-list'),
+    path('makers_detail/<int:pk>/', views.MakerDetailView.as_view(), name='maker-detail'),
     path('cars_detail/<str:car_name>/', views.car_detail, name='car_detail'),
 ]
 
